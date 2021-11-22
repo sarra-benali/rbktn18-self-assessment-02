@@ -41,11 +41,15 @@ function map(array, func) {
 //of all of those strings, but transformed to upper case.
 //You can use toUpperCase method to convert a string to upper case.
 // Note: please write one or two lines here describing your solution.
+i declared the each and the map function then i wrote a function called uppercaseAll take arrayOfStrings as a parameter and i used map to conver a string to upper case 
+and i used .toUpperCase too .
 // var strArr = ['hello', 'world', 'whirled', 'peas'];
 // uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
 
 function uppercaseAll(arrayOfStrings) {
-  // TODO: your code here
+  return map(arrayOfStrings,function(str) {
+return str.toUpperCase()
+  })
 
 }
 
@@ -75,10 +79,12 @@ var data = [
   }
 ];
 // highestPopulation(data); ==> [{country: "China", population: 1409517397},{country: "India", population: 1339180127}]
-// Note: please write one or two lines here describing your solution.
+// Note: please write one or two lines here describing your solution.///// i used filter that take two parameter an array and a function to return the population grater that 500 millon.
 
 function highestPopulation(arrayOfObjects) {
-  // TODO: your code here
+  return filter(arrayOfObjects, function(obj){
+    return obj.population > 500000000
+  })
 
 }
 
@@ -90,10 +96,12 @@ function highestPopulation(arrayOfObjects) {
 // of all of those numbers halved (divided by two).
 // var numsArray = [2, 6, 20, 8, 14];
 // halveAll(numsArray); ==> [ 1, 3, 10, 4, 7 ]
-// Note: please write one or two lines here describing your solution.
+// Note: please write one or two lines here describing your solution.////i used map that take two parameter an array of numbers and a function that take a number as a parameter and i returned the numbers halved by 2 .
 
 function halveAll(numbers) {
-  // your code is here
+ return map(numbers,function(number){
+   return number/2
+ })
 
 }
 
@@ -102,10 +110,14 @@ function halveAll(numbers) {
 //=============================================================================
 //Using Each, write a function called values that accepts an object as a parameter, and outputs an array of the object's values.
 // values({first : 5, second: 'something' , third : 129}) ==> [5, 'something', 129];
-// Note: please write one or two lines here describing your solution.
+// Note: please write one or two lines here describing your solution. //// i declared a var arr with empty array and i used each to push the value froù the object to the empty array.
 
 function values(obj) {
-  // your code is here
+ var arr=[]
+ each(obj,function(value){
+  arr.push(value)
+ })
+ return arr
 
 }
 
